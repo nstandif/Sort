@@ -1,0 +1,2 @@
+sort240: sort240.cpp
+	gcc source/sort240.c -o binaries/sort240
