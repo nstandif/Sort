@@ -1,0 +1,11 @@
+67  mozy
+23  mozart
+12  fred
+1   dingo
+23  bat
+40  cow
+3   horse
+3   chicken
+
+
+3   graze
