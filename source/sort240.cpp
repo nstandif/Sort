@@ -166,6 +166,11 @@ bool chkSpace(char * d) {
 }
 
 int main(int argc, char ** argv) {
+  if(argc <= 2) {
+    cout << "Usage: sort240 [options] field file"
+	 << endl;
+    exit(0);
+  }
   argv = processTokens(argc, argv);
   fstream in(*argv);
  
@@ -184,5 +189,6 @@ int main(int argc, char ** argv) {
     cout << data[i]
          << endl;
   }
+  return 0;
 }
 
