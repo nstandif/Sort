@@ -172,9 +172,16 @@ int main(int argc, char ** argv) {
     exit(0);
   }
   argv = processTokens(argc, argv);
-  fstream in(*argv);
- 
+  ifstream in(*argv);
+  if(in.fail()) {
+    cerr << "Error opening '"
+	 << *argv << "'"
+	 << endl;
+    exit(0);
+  }
+
   char data[MAX][MAX];
+
   int count = 0; 
   for(count = 0; count<MAX && in.good(); count++) {
     in.getline(static_cast<char*>(data[count]),static_cast<int>(MAX));
